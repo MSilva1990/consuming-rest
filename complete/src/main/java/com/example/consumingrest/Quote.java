@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Quote {
 
 	private String cep;
+
+	private String logradouro;
+	private String complemento;
 	private Value value;
 
 	public Quote() {
@@ -27,10 +30,28 @@ public class Quote {
 		this.value = value;
 	}
 
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
 	@Override
 	public String toString() {
 		return "Quote{" +
 				"cep='" + cep + '\'' +
+				"logradouro='" + logradouro + '\'' +
+				"complemento='" + complemento + '\'' +
 				", value=" + value +
 				'}';
 	}
